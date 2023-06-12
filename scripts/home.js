@@ -309,7 +309,7 @@ function handleDownload() {
                     settings_string += "\n    \"" + setting + "\": " + value + ",";
                 }
             });
-            settings_string = settings_string.substring(0, blacklists.length - 1);
+            settings_string = settings_string.substring(0, settings_string.length - 1);
             settings_string += "\n}";
 
             zip.file("data/moremobvariants/settings/settings.json", settings_string);
