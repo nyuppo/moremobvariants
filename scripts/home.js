@@ -75,7 +75,7 @@ function generateCategories() {
                 let imgContainer = document.createElement("div");
                 imgContainer.classList.add("img-container");
                 let img = document.createElement("img");
-                img.src = "/moremobvariants/assets/images/settings/" + variant + ".png";
+                img.src = "assets/images/settings/" + variant + ".png";
                 imgContainer.appendChild(img);
                 variantEntry.appendChild(imgContainer);
 
@@ -170,7 +170,7 @@ function generateCategories() {
             let imgContainer = document.createElement("div");
             imgContainer.classList.add("img-container");
             let img = document.createElement("img");
-            img.src = "/moremobvariants/assets/images/variants/" + mob + "_" + variant + ".png";
+            img.src = "assets/images/variants/" + mob + "_" + variant + ".png";
             imgContainer.appendChild(img);
             variantEntry.appendChild(imgContainer);
 
