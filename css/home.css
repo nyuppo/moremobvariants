@@ -1,0 +1,439 @@
+body {
+    background-color: #121212;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.logo {
+    text-align: left;
+    margin-left: 2em;
+    display: flex;
+}
+
+.logo img {
+    max-height: 3em;
+    margin-top: 1.5em;
+}
+
+.logo h4 {
+    margin-top: 1.5em;
+    line-height: 3em;
+    color: rgb(255, 255, 255);
+}
+
+.logo h4::before {
+    content: "| ";
+}
+
+.links {
+    margin-right: 2em;
+    margin-top: 1.5em;
+}
+
+.links a {
+    color: transparent;
+    padding: 0.5em;
+}
+
+.links svg {
+    max-height: 2em;
+    max-width: 2em;
+    fill: rgb(255, 255, 255, 0.5);
+
+    transition: fill 0.1s ease;
+}
+
+.links svg:hover {
+    fill: rgb(255, 255, 255, 1);
+}
+
+#categories {
+    display: block;
+    padding: 2em;
+    user-select: none;
+}
+
+.category {
+    background-color: rgb(255, 255, 255, 0.05);
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.category h4::after {
+    content: "(modified)";
+    text-align: right;
+    float: right;
+    font-size: 0.8em;
+
+    padding: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 0.5em;
+
+    color: rgb(255, 255, 255, 0);
+    background-color: rgb(255, 255, 255, 0);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.category.modified h4::after {
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 82, 55);
+}
+
+h4 {
+    margin: 0.5em;
+
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+}
+
+hr {
+    border: none;
+    border-top: solid rgb(255, 255, 255, 0.25);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.category h4 {
+    cursor: pointer;
+}
+
+.category .arrow-container {
+    margin-left: 0.5em;
+}
+
+.category .arrow {
+    border: solid rgb(255, 255, 255, 0.5);
+    border-width: 0 0.2em 0.2em 0;
+    display: inline-block;
+    padding: 0.2em;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.category:not(.open) .arrow {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.category:not(.open):hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.category .variants {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+
+    cursor: pointer;
+}
+
+.category.open .variants {
+    max-height: 100vh;
+}
+
+.category.settings {
+    border: solid rgb(255, 255, 255, 0.1);
+}
+
+.variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.variant {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 0.5em;
+    min-width: 10em;
+
+    transition: background-color 0.1s ease;
+}
+
+.variant:hover {
+    background-color: rgb(255, 255, 255, 0.15);
+}
+
+.variant.default {
+    cursor: default;
+    background-color: rgb(255, 255, 255, 0.15);
+}
+
+.variant.disabled {
+    background-color: rgb(255, 255, 255, 0.02);
+}
+
+.variant .name {
+    color: rgb(255, 255, 255, 1);
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    margin: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    text-align: center;
+}
+
+.variant.disabled .name {
+    color: rgb(255, 255, 255, 0.25);
+}
+
+.variant .img-container {
+    max-width: 8em;
+    max-height: 8em;
+    margin: auto;
+    overflow: hidden;
+}
+
+.variant.disabled .img-container {
+    opacity: 25%;
+}
+
+.variant .img-container img {
+    max-width: 100%;
+    max-height: 100%;
+
+    transition: max-width 0.1s ease, max-height 0.1s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+}
+
+.variant:hover .img-container {
+    max-width: 8em;
+    max-height: 8em;
+}
+
+.variant:not(.disabled):hover .img-container img {
+    max-width: 110%;
+    max-height: 110%;
+    transform: translateX(-5%) translateY(-5%);
+    -webkit-transform: translateX(-5%) translateY(-5%);
+}
+
+.variant-attribute {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 0.125em;
+    margin-bottom: 0.125em;
+}
+
+.variant.disabled .variant-attribute {
+    opacity: 50%;
+}
+
+.variant-attribute-container {
+    margin-top: 1em;
+}
+
+.variant-attribute:last-child {
+    margin-bottom: 1em;
+}
+
+.variant.default .variant-attribute-container {
+    position: relative;
+    bottom: -1em;
+}
+
+.variant.no-weight .variant-attribute-container {
+    position: relative;
+    bottom: -1em;
+}
+
+.variant label {
+    margin-left: 0.5em;
+    
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8em;
+    line-height: 1.8em;
+}
+
+.variant .enabled-input {
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
+}
+
+.variant .enabled-container {
+    display: none;
+}
+
+.variant .weight {
+    float: right;
+    text-align: left;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-top: 0.05em;
+    padding-left: 0.5em;
+
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 0.125em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.variant .chance-label::after {
+    content: "(out of 10)";
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.container {
+    display: flex;
+
+}
+
+.menu {
+    background-color: rgb(255, 255, 255, 0.05);
+    margin: 2em;
+    margin-left: 0;
+    padding: 1em;
+    border-radius: 0.5em;
+    flex-grow: 2;
+    width: 20%;
+    height: fit-content;
+}
+
+.menu p {
+    color: rgb(255, 255, 255, 0.8);
+    margin: 0.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8em;
+}
+
+.menu p a {
+    color: rgb(0, 117, 255);
+}
+
+.menu p a:hover {
+    color: rgb(70, 157, 255);
+}
+
+.menu .button-container {
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+.menu button {
+    height: 3em;
+    
+    display: block;
+    width: 100%;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(250, 82, 55);
+    border: 0;
+    border-radius: 0.5em;
+
+    cursor: pointer;
+
+    transition: background-color 0.1s ease;
+}
+
+.menu button:hover {
+    background-color: rgb(255, 145, 110);
+}
+
+.menu button:active {
+    background-color: rgb(255, 227, 188);
+}
+
+.menu .subtitle {
+    display: inline;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.pack-data {
+    background-color: rgb(255, 255, 255, 0.2);
+    border: 0;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    color: rgb(255, 255, 255, 0.8);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8em;
+
+    display: block;
+    margin-right: 1em;
+    margin-left: 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo img {
+        max-width: 20em;
+        margin-top: 1.5em;
+    }
+
+    .logo h4 {
+        margin-top: 0;
+    }
+
+    .logo h4::before {
+        content: "";
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .links {
+        text-align: center;
+        margin: 0;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #categories {
+        padding: 0.5em;
+    }
+
+    .menu {
+        position: fixed;
+        
+        margin: 0;
+        bottom: 1%;
+
+        max-width: 1000px;
+        width: 80%;
+        
+        transform: translateX(-50%);
+        left: 50%;
+
+        background-color: rgb(30, 30, 30);
+        filter: drop-shadow(0 0 1em #121212);
+    }
+
+    .menu .button-container {
+        margin-top: 1em;
+    }
+}

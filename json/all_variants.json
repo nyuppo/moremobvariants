@@ -1,0 +1,65 @@
+{
+    "settings": {
+        "enable_muddy_pigs": -1,
+        "wolf_breeding_chance": 5
+    },
+    "cat": {
+        "gray_tabby": -1,
+        "doug": -1,
+        "handsome": -1,
+        "tortoiseshell": -1
+    },
+    "chicken": {
+        "default": 3,
+        "midnight": 1,
+        "amber": 2,
+        "gold_crested": 2,
+        "bronzed": 2,
+        "skewbald": 2,
+        "stormy": 2,
+        "bone": -1
+    },
+    "cow": {
+        "default": 3,
+        "umbra": 1,
+        "ashen": 2,
+        "cookie": 2,
+        "dairy": 2,
+        "pinto": 2,
+        "sunset": 2,
+        "wooly": 2
+    },
+    "pig": {
+        "default": 2,
+        "mottled": 1,
+        "piebald": 1,
+        "pink_footed": 1,
+        "sooty": 1,
+        "spotted": 1
+    },
+    "sheep": {
+        "default": 3,
+        "patched": 1,
+        "fuzzy": 1,
+        "rocky": 1
+    },
+    "wolf": {
+        "default": 1,
+        "jupiter": 1,
+        "husky": 1,
+        "german_shepherd": -1,
+        "golden_retriever": -1,
+        "french_bulldog": -1
+    },
+    "zombie": {
+        "default": 3,
+        "alex": 2,
+        "ari": 1,
+        "efe": 1,
+        "kai": 1,
+        "makena": 1,
+        "noor": 1,
+        "sunny": 1,
+        "zuri": 1
+    }
+}
