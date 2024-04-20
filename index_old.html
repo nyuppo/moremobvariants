@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
         <script type="module" src="scripts/jszip.js"></script>
         <script type="module" src="scripts/FileSaver.js"></script>
-        <!--<script type="module" src="scripts/home.js"></script>-->
+        <script type="module" src="scripts/home.js"></script>
 
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -45,13 +45,21 @@
             </div>
         </div>
 
-        <div class="construction">
-            <h4>We're under construction!</h4>
-            <p>This page is under construction until the new config generator is ready.</p>
-            <p>For now, feel free to join the discord if you need help with configuring the mod manually.</p>
-            <img src="assets/images/construction/construction.png" alt="Chicken with a construction hat">
+        <div class="container">
+            <div id="categories"></div>
+            <div class="menu">
+                <h4>Installation</h4>
+                <p>To use your custom pack, load the downloaded .zip file as a data pack.</p>
+                <hr>
+                <h4>Pack Name</h4>
+                <input type="text" class="pack-data" id="pack-name" name="pack-name" placeholder="Name your datapack...">
+                <h4>Author <p class="subtitle">(Optional)</p></h4>
+                <input type="text" class="pack-data" id="pack-author" name="pack-author" placeholder="Your name...">
+                <div class="button-container">
+                    <button id="downloadbutton">Download</button>
+                </div>
+            </div>
         </div>
-        
         
     </body>
 </html>
