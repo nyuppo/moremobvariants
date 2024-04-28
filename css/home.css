@@ -454,11 +454,11 @@ hr {
         margin-top: 1.5em;
     }
 
-    .logo h4 {
+    .logo h1 {
         margin-top: 0;
     }
 
-    .logo h4::before {
+    .logo h1::before {
         content: "";
     }
 
