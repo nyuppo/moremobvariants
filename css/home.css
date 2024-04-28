@@ -78,7 +78,7 @@ body {
     cursor: pointer;
 }
 
-.category h4::after {
+.category h3::after {
     content: "(modified)";
     text-align: right;
     float: right;
@@ -94,12 +94,12 @@ body {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.category.modified h4::after {
+.category.modified h3::after {
     color: rgb(255, 255, 255);
     background-color: rgb(250, 82, 55);
 }
 
-h1, h4 {
+h1, h3, h4 {
     margin: 0.5em;
 
     color: white;
@@ -114,8 +114,9 @@ hr {
     margin-bottom: 1em;
 }
 
-.category h4 {
+.category h3 {
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .category .arrow-container {
