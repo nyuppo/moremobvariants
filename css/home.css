@@ -422,6 +422,15 @@ hr {
     margin-left: 0.5em;
 }
 
+.pack-data-label {
+    margin: 0.5em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: block;
+}
+
 @media only screen and (max-width: 1000px) {
     .container {
         flex-direction: column;
