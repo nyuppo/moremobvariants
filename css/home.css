@@ -482,16 +482,14 @@ hr {
     }
 
     .menu {
-        position: fixed;
+        position: sticky;
         
         margin: 0;
         bottom: 1%;
 
         max-width: 1000px;
         width: 80%;
-        
-        transform: translateX(-50%);
-        left: 50%;
+        margin-inline: auto;
 
         background-color: rgb(30, 30, 30);
         filter: drop-shadow(0 0 1em #121212);
