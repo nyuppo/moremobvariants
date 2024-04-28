@@ -257,7 +257,12 @@ function generateCategories() {
         });
 
         category.appendChild(variants);
-        document.getElementById("categories").appendChild(category);
+
+        const title = document.createElement('h2');
+        title.textContent = 'Settings categories';
+        title.classList.add('visually-hidden');
+
+        document.getElementById("categories").append(title, category);
     }
 }
 
