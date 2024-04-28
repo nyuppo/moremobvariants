@@ -50,9 +50,9 @@ function generateCategories() {
         categoryName.innerText = mob;
         category.appendChild(categoryName);
 
-        let categoryArrowContainer = document.createElement("i");
+        let categoryArrowContainer = document.createElement("span");
         categoryArrowContainer.classList.add("arrow-container");
-        let categoryArrow = document.createElement("i");
+        let categoryArrow = document.createElement("span");
         categoryArrow.classList.add("arrow");
         categoryArrowContainer.appendChild(categoryArrow);
         categoryName.appendChild(categoryArrowContainer);
