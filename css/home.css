@@ -31,13 +31,14 @@ body {
     margin-top: 1.5em;
 }
 
-.logo h4 {
+.logo h1 {
     margin-top: 1.5em;
     line-height: 3em;
     color: rgb(255, 255, 255);
+    font-size: 1rem;
 }
 
-.logo h4::before {
+.logo h1::before {
     content: "| ";
 }
 
@@ -98,7 +99,7 @@ body {
     background-color: rgb(250, 82, 55);
 }
 
-h4 {
+h1, h4 {
     margin: 0.5em;
 
     color: white;
