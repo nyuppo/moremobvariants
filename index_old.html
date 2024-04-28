@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta chatset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,8 @@
     <body>
         <div class="nav">
             <div class="logo">
-                <img src="assets/images/logo/logo-0_assembly-1.png">
-                <h4>Config Generator</h4>
+                <img src="assets/images/logo/logo-0_assembly-1.png" alt="More Mob Variants">
+                <h1>Config Generator</h1>
             </div>
     
             <div class="links">
@@ -31,16 +31,28 @@
                     <svg class="curseforge-logo">
                         <use href="assets/sprite.svg#cf"></use>
                     </svg>
+
+                    <span class="visually-hidden">
+                        See More Mob Variants on Curseforge
+                    </span>
                 </a>
                 <a href="https://modrinth.com/mod/more-mob-variants" target="_blank" rel="noopener noreferrer">
                     <svg class="modrinth-logo">
                         <use href="assets/sprite.svg#modrinth"></use>
                     </svg>
+
+                    <span class="visually-hidden">
+                        See More Mob Variants on Modrinth
+                    </span>
                 </a>
                 <a href="https://discord.gg/CeTHcXUJJv" target="_blank" rel="noopener noreferrer">
                     <svg class="discord-logo">
                         <use href="assets/sprite.svg#discord"></use>
                     </svg>
+
+                    <span class="visually-hidden">
+                        Join the More Mob Variants Discord server
+                    </span>
                 </a>
             </div>
         </div>
@@ -48,12 +60,12 @@
         <div class="container">
             <div id="categories"></div>
             <div class="menu">
-                <h4>Installation</h4>
+                <h2>Installation</h2>
                 <p>To use your custom pack, load the downloaded .zip file as a data pack.</p>
                 <hr>
-                <h4>Pack Name</h4>
+                <label class="pack-data-label" for="pack-name">Pack Name</label>
                 <input type="text" class="pack-data" id="pack-name" name="pack-name" placeholder="Name your datapack...">
-                <h4>Author <p class="subtitle">(Optional)</p></h4>
+                <label class="pack-data-label" for="pack-author">Author <p class="subtitle">(Optional)</p></label>
                 <input type="text" class="pack-data" id="pack-author" name="pack-author" placeholder="Your name...">
                 <div class="button-container">
                     <button id="downloadbutton">Download</button>
