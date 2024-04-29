@@ -327,11 +327,25 @@ function handleDownload() {
             }
 
 
-            zip.generateAsync({type:"blob"}).then(function(content) {
+            zip.generateAsync({type:"base64"}).then(function(content) {
                 saveAs(content, "MMV_" + packname.value + ".zip");
             });
         }
     });
+}
+
+/**
+ * @param {string} content base64 encoded
+ * @param {string} filename 
+ */
+function saveAs(content, filename = 'download.zip') {
+    const anchor = document.createElement("a");
+    anchor.download = filename;
+    anchor.href = `data:application/zip;base64,${content}`;
+
+    anchor.click();
+
+    anchor.remove();
 }
 
 function shallowEqual(object1, object2) {
