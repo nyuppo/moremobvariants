@@ -2,6 +2,18 @@ body {
     background-color: #121212;
 }
 
+.visually-hidden {
+    border-width: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -19,13 +31,14 @@ body {
     margin-top: 1.5em;
 }
 
-.logo h4 {
+.logo h1 {
     margin-top: 1.5em;
     line-height: 3em;
     color: rgb(255, 255, 255);
+    font-size: 1rem;
 }
 
-.logo h4::before {
+.logo h1::before {
     content: "| ";
 }
 
@@ -65,7 +78,7 @@ body {
     cursor: pointer;
 }
 
-.category h4::after {
+.category h3::after {
     content: "(modified)";
     text-align: right;
     float: right;
@@ -81,12 +94,12 @@ body {
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.category.modified h4::after {
+.category.modified h3::after {
     color: rgb(255, 255, 255);
     background-color: rgb(250, 82, 55);
 }
 
-h4 {
+h1, h2, h3, h4 {
     margin: 0.5em;
 
     color: white;
@@ -101,8 +114,9 @@ hr {
     margin-bottom: 1em;
 }
 
-.category h4 {
+.category h3 {
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .category .arrow-container {
@@ -306,6 +320,10 @@ hr {
     height: fit-content;
 }
 
+.menu h2 {
+    font-size: 1rem;
+}
+
 .menu p {
     color: rgb(255, 255, 255, 0.8);
     margin: 0.5em;
@@ -410,6 +428,15 @@ hr {
     margin-left: 0.5em;
 }
 
+.pack-data-label {
+    margin: 0.5em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: block;
+}
+
 @media only screen and (max-width: 1000px) {
     .container {
         flex-direction: column;
@@ -427,11 +454,11 @@ hr {
         margin-top: 1.5em;
     }
 
-    .logo h4 {
+    .logo h1 {
         margin-top: 0;
     }
 
-    .logo h4::before {
+    .logo h1::before {
         content: "";
     }
 
@@ -455,16 +482,14 @@ hr {
     }
 
     .menu {
-        position: fixed;
+        position: sticky;
         
         margin: 0;
         bottom: 1%;
 
         max-width: 1000px;
         width: 80%;
-        
-        transform: translateX(-50%);
-        left: 50%;
+        margin-inline: auto;
 
         background-color: rgb(30, 30, 30);
         filter: drop-shadow(0 0 1em #121212);

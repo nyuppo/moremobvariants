@@ -50,9 +50,9 @@ function generateCategories() {
         categoryName.innerText = mob;
         category.appendChild(categoryName);
 
-        let categoryArrowContainer = document.createElement("i");
+        let categoryArrowContainer = document.createElement("span");
         categoryArrowContainer.classList.add("arrow-container");
-        let categoryArrow = document.createElement("i");
+        let categoryArrow = document.createElement("span");
         categoryArrow.classList.add("arrow");
         categoryArrowContainer.appendChild(categoryArrow);
         categoryName.appendChild(categoryArrowContainer);
@@ -76,6 +76,7 @@ function generateCategories() {
                 imgContainer.classList.add("img-container");
                 let img = document.createElement("img");
                 img.src = "assets/images/settings/" + variant + ".png";
+                img.alt = variant.replace(/_/g, ' ');
                 imgContainer.appendChild(img);
                 variantEntry.appendChild(imgContainer);
 
@@ -171,6 +172,7 @@ function generateCategories() {
             imgContainer.classList.add("img-container");
             let img = document.createElement("img");
             img.src = "assets/images/variants/" + mob + "_" + variant + ".png";
+            img.alt = variant.replace(/_/g, ' ');
             imgContainer.appendChild(img);
             variantEntry.appendChild(imgContainer);
 
@@ -255,7 +257,12 @@ function generateCategories() {
         });
 
         category.appendChild(variants);
-        document.getElementById("categories").appendChild(category);
+
+        const title = document.createElement('h2');
+        title.textContent = 'Settings categories';
+        title.classList.add('visually-hidden');
+
+        document.getElementById("categories").append(title, category);
     }
 }
 
